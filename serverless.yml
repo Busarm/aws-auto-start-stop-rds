@@ -9,10 +9,19 @@ provider:
   lambdaHashingVersion: 20201221
   profile: wecari
   region: ${opt:region, 'eu-west-2'} # e.g serverless delopy --region eu-west-2 (default = 'eu-west-2')
+  role: WecariAutoStartStopRDSLambdaRole
+
+
+package:
+    exclude:
+        - .git/**
+        - .serverless/**
+        - node_modules/**
 
 functions:
   Handler:
     handler: handler.run
+    description: 'Auto-start and Auto-stop RDS database.'
     events:
       # Start at 8am UTC MON to FRI
       - schedule: 
@@ -51,6 +60,7 @@ resources:
                     - logs:CreateLogStream
                     - logs:PutLogEvents
                     - RDS:DESCRIBEDBINSTANCES
+                    - RDS:LISTTAGSFORRESOURCE
                     - RDS:STARTDBINSTANCE
                     - RDS:STOPDBINSTANCE
                   Resource: "*" 
