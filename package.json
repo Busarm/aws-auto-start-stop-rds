@@ -1,7 +1,7 @@
 {
-  "name": "Wecari-Auto-Start-Stop-RDS",
+  "name": "wecari-auto-start-stop-rds",
   "version": "1.0.0",
-  "description": "Example of creating a function that runs as a cron job using the serverless `schedule` event",
+  "description": "Serverless application to auto-start and auto-stop RDS database at a given time",
   "author": "",
   "license": "MIT",
   "dependencies": {
