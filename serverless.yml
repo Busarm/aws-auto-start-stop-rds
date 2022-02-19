@@ -26,7 +26,7 @@ functions:
     events:
       # Start at 8am UTC MON to FRI
       - schedule: 
-          rate: cron(0 8 ? * MON-FRI *)
+          rate: cron(0 8 ? * * *)
           input:
               start: true
       # Stop at 10pm UTC Everyday
