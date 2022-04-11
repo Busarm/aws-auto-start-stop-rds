@@ -1,5 +1,5 @@
 {
-  "name": "wecari-auto-start-stop-rds",
+  "name": "busarm-auto-start-stop-rds",
   "version": "1.0.0",
   "description": "Serverless application to auto-start and auto-stop RDS database at a given time",
   "author": "",

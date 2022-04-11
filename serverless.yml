@@ -1,4 +1,4 @@
-service: Wecari-Auto-Start-Stop-RDS
+service: Busarm-Auto-Start-Stop-RDS
 
 frameworkVersion: '2 || 3'
 
@@ -7,10 +7,10 @@ provider:
   name: aws
   runtime: nodejs12.x
   lambdaHashingVersion: 20201221
-  profile: wecari
+  profile: busarm # Replase with your local deployment profile
   region: ${opt:region, 'eu-west-2'} # e.g serverless delopy --region eu-west-2 (default = 'eu-west-2')
   stage: ${opt:stage, 'Dev'} # e.g serverless delopy --stage dev (default = 'dev')
-  role: WecariAutoStartStopRDSLambdaRole
+  role: BusarmAutoStartStopRDSLambdaRole
 
 package:
     exclude:
@@ -37,10 +37,10 @@ functions:
 
 resources:
   Resources: 
-    WecariAutoStartStopRDSLambdaRole:
+    BusarmAutoStartStopRDSLambdaRole:
       Type: AWS::IAM::Role
       Properties:
-        RoleName: WecariAutoStartStopRDSLambdaRole-${self:provider.region}
+        RoleName: BusarmAutoStartStopRDSLambdaRole-${self:provider.region}
         Path: /
         AssumeRolePolicyDocument:
           Version: "2012-10-17"
@@ -51,7 +51,7 @@ resources:
                   - lambda.amazonaws.com
               Action: sts:AssumeRole
         Policies:
-          - PolicyName: WecariAutoStartStopRDSLambdaPolicy
+          - PolicyName: BusarmAutoStartStopRDSLambdaPolicy
             PolicyDocument:
               Version: "2012-10-17"
               Statement:
