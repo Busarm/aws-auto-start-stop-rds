@@ -15,6 +15,9 @@ Serverless application to auto-start and auto-stop RDS database at a given time
   - `AUTO-START = 1` -  To Auto-start database at the scheduled time
   - `AUTO-STOP = 1` -  To Auto-stop database at the scheduled time
 
+## Install
+- Run `npm install`
+
 ## Deployment 
 - See (https://serverless.com)
 - Run `sls deploy`
