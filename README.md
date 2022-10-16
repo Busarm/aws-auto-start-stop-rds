@@ -1,8 +1,8 @@
-# Busarm Auto-Start Auto-Stop RDS
+# AWS Auto-Start Auto-Stop RDS
 
 ## Description
 
-Serverless application to auto-start and auto-stop RDS database at a given time	
+Serverless application to auto-start and auto-stop AWS RDS database at a given time	
 
 ## Specification
 
