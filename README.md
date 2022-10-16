@@ -1,4 +1,4 @@
-# AWS Auto-Start Auto-Stop RDS
+# Auto Start & Stop AWS RDS
 
 ## Description
 
